@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del 7 y medio</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="titulo">7 y medio</header>
+
+    <div class="container">
+
+        <div class="row mt-2">
+            <div id="botones" class="col text-center">
+                <button type="button" id="btnNuevaPartida" class="btn btn-success btn-sm">NUEVA PARTIDA</button>
+                <button type="button" id="btnPedirCarta" class="btn btn-primary btn-sm">PEDIR CARTA</button>
+                <button type="button" id="btnDetener" class="btn btn-danger btn-sm" disabled="true">PASAR</button>
+            </div> 
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <h3>Puntos Jugador: <small>0</small></h2>
+                <div id="cartas-jugador">
+
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>Puntos Ordenador: <small>0</small></h2>
+                    <div id="cartas-ordenador">
+
+                    </div>
+                </div>           
+        </div>
+    </div>
+
+    <!-- Modal / Ventana / Overlay en HTML -->
+    <div id="pantalla-final" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title titulo-partida">Final de la partida</h5>
+                </div>
+                <div class="modal-body final-partida">
+                    <b>Ha ganado el: </b><span id="ganador"></span><br>
+                    <b>Puntuación: </b><span id="puntuacion-ganador"></span>
+                </div>
+                <div class="modal-footer titulo-partida">
+                    <div class="titulo-partida">
+                        <!-- <button type="button" id="btnNuevaPartida" class="btn btn-success">NUEVA PARTIDA</button> -->
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" aria-hidden="true">CERRAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/underscore-min.js"></script>
+    <script src="./assets/js/juego.js"></script>
+</body>
+</html>
